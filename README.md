@@ -20,9 +20,9 @@
 
 Here's an example of how the data looks (*each class takes three-rows*):
 
-![](doc/img/fashion-mnist-sprite.png)
+![](fashion-mnist-sprite.png)
 
-<img src="doc/img/embedding.gif" width="100%">
+<img src="embedding.gif" width="100%">
 
 ## Why we made Fashion-MNIST
 
