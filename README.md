@@ -1,8 +1,5 @@
 # Fashion-MNIST
 
-<<<<<<< Updated upstream
-
-
 <details><summary>Table of Contents</summary><p>
 
 * [Why we made Fashion-MNIST](#why-we-made-fashion-mnist)
@@ -20,24 +17,6 @@
 `Fashion-MNIST` is a dataset of [Zalando](https://jobs.zalando.com/tech/)'s article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. We intend `Fashion-MNIST` to serve as a direct **drop-in replacement** for the original [MNIST dataset](http://yann.lecun.com/exdb/mnist/) for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits.
 
 Here's an example of how the data looks (*each class takes three-rows*):
-=======
-<details><summary>Table of Contents</summary><p>
-
-- [Why we made Fashion-MNIST](#why-we-made-fashion-mnist)
-- [Get the Data](#get-the-data)
-- [Usage](#usage)
-- [Benchmark](#benchmark)
-- [Visualization](#visualization)
-- [Contributing](#contributing)
-- [Contact](#contact)
-- [Citing Fashion-MNIST](#citing-fashion-mnist)
-- [License](#license)
-</p></details><p></p>
-
-`Fashion-MNIST` is a dataset of [Zalando](https://jobs.zalando.com/tech/)'s article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. We intend `Fashion-MNIST` to serve as a direct **drop-in replacement** for the original [MNIST dataset](http://yann.lecun.com/exdb/mnist/) for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits.
-
-Here's an example of how the data looks (_each class takes three-rows_):
->>>>>>> Stashed changes
 
 ![](fashion-mnist-sprite.png)
 
@@ -45,11 +24,7 @@ Here's an example of how the data looks (_each class takes three-rows_):
 
 ## Why we made Fashion-MNIST
 
-<<<<<<< Updated upstream
 The original [MNIST dataset](http://yann.lecun.com/exdb/mnist/) contains a lot of handwritten digits. Members of the AI/ML/Data Science community love this dataset and use it as a benchmark to validate their algorithms. In fact, MNIST is often the first dataset researchers try. *"If it doesn't work on MNIST, it **won't work** at all"*, they said. *"Well, if it does work on MNIST, it may still fail on others."* 
-=======
-The original [MNIST dataset](http://yann.lecun.com/exdb/mnist/) contains a lot of handwritten digits. Members of the AI/ML/Data Science community love this dataset and use it as a benchmark to validate their algorithms. In fact, MNIST is often the first dataset researchers try. _"If it doesn't work on MNIST, it **won't work** at all"_, they said. _"Well, if it does work on MNIST, it may still fail on others."_
->>>>>>> Stashed changes
 
 ### To Serious Machine Learning Researchers
 
@@ -74,24 +49,12 @@ You can use direct links to download the dataset. The data is stored in the **sa
 | `t10k-labels-idx1-ubyte.gz`  | test set labels  | 10,000| 5.1 KBytes | [Download](http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz)|`bb300cfdad3c16e7a12a480ee83cd310`|
 
 Alternatively, you can clone this GitHub repository; the dataset appears under `data/fashion`. This repo also contains some scripts for benchmark and visualization.
-   
-=======
-| Name                         | Content             | Examples | Size       | Link                                                                                              | MD5 Checksum                       |
-| ---------------------------- | ------------------- | -------- | ---------- | ------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| `train-images-idx3-ubyte.gz` | training set images | 60,000   | 26 MBytes  | [Download](http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz) | `8d4fb7e6c68d591d4c3dfef9ec88bf0d` |
-| `train-labels-idx1-ubyte.gz` | training set labels | 60,000   | 29 KBytes  | [Download](http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz) | `25c81989df183df01b3e8a0aad5dffbe` |
-| `t10k-images-idx3-ubyte.gz`  | test set images     | 10,000   | 4.3 MBytes | [Download](http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz)  | `bef4ecab320f06d8554ea6380940ec79` |
-| `t10k-labels-idx1-ubyte.gz`  | test set labels     | 10,000   | 5.1 KBytes | [Download](http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz)  | `bb300cfdad3c16e7a12a480ee83cd310` |
 
-Alternatively, you can clone this GitHub repository; the dataset appears under `data/fashion`. This repo also contains some scripts for benchmark and visualization.
-
->>>>>>> Stashed changes
 ```bash
 git clone git@github.com:zalandoresearch/fashion-mnist.git
 ```
 
 ### Labels
-<<<<<<< Updated upstream
 Each training and test example is assigned to one of the following labels:
 
 | Label | Description |
@@ -106,33 +69,15 @@ Each training and test example is assigned to one of the following labels:
 | 7 | Sneaker |
 | 8 | Bag |
 | 9 | Ankle boot |
-=======
 
-Each training and test example is assigned to one of the following labels:
-
-| Label | Description |
-| ----- | ----------- |
-| 0     | T-shirt/top |
-| 1     | Trouser     |
-| 2     | Pullover    |
-| 3     | Dress       |
-| 4     | Coat        |
-| 5     | Sandal      |
-| 6     | Shirt       |
-| 7     | Sneaker     |
-| 8     | Bag         |
-| 9     | Ankle boot  |
->>>>>>> Stashed changes
 
 ## Usage
 
 ### Loading data with Python (requires [NumPy](http://www.numpy.org/))
 
 Use `utils/mnist_reader` in this repo:
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
+
 ```python
 import mnist_reader
 X_train, y_train = mnist_reader.load_mnist('data/fashion', kind='train')
@@ -140,12 +85,9 @@ X_test, y_test = mnist_reader.load_mnist('data/fashion', kind='t10k')
 ```
 
 ### Loading data with Tensorflow
-<<<<<<< Updated upstream
 Make sure you have [downloaded the data](#get-the-data) and placed it in `data/fashion`. Otherwise, *Tensorflow will download and use the original MNIST.*
-=======
 
-Make sure you have [downloaded the data](#get-the-data) and placed it in `data/fashion`. Otherwise, _Tensorflow will download and use the original MNIST._
->>>>>>> Stashed changes
+
 
 ```python
 from tensorflow.examples.tutorials.mnist import input_data
@@ -154,12 +96,8 @@ data = input_data.read_data_sets('data/fashion')
 data.train.next_batch(BATCH_SIZE)
 ```
 
-<<<<<<< Updated upstream
 Note, Tensorflow supports passing in a source url to the `read_data_sets`. You may use: 
-=======
-Note, Tensorflow supports passing in a source url to the `read_data_sets`. You may use:
 
->>>>>>> Stashed changes
 ```python
 data = input_data.read_data_sets('data/fashion', source_url='http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/')
 ```
